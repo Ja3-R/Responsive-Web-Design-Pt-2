@@ -1,0 +1,119 @@
+<DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Welcome to the most sort-after careers in Wellington, New Zealand">
+  <meta name="keywords" content="Information Technology, wellington I.T, new zealand careers, IT careers,">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and(max-width: 768px)" href="css/mobile.css">
+  <title>Work 4 IT | Employer Page</title>
+
+  <script type="text/javascript">
+    function checkform()
+    {
+      x = document.getElementById("na").value;
+      y = document.getElementById("jt").value;
+      z = document.getElementById("s").value;
+      a = document.getElementById("num").value;
+      b = document.getElementById("e").value;
+      
+      pattern1 = /^[a-zA-Z]+[ ]*[a-zA-Z]+$/;
+      pattern2 = /^[a-zA-Z]+[ ]*[a-zA-Z]+$/;
+      pattern3 = /^[0-9]+$/;
+      pattern4 = /^(\((03|04|06|07|09)\)\d{7})|(\((021|022|025|027|028|029)\)\d{6,8})|((0508|0800|0900)\d{5,8})$/;
+      pattern5 = /^[a-zA-z0-9]|[@]|((.my|.com|.net))$/;
+
+      if (!pattern1.test(x))
+      {
+        alert("Please enter a valid Company Name");
+        document.getElementById("na").select();
+        return false;
+      }
+      else if (!pattern2.test(y))
+      { 
+        alert("Please enter a valid job title");
+        document.getElementById("jt").select();
+        return false;
+      }
+      else if (!pattern3.test(z))
+      { 
+        alert("Please enter a valid salary");
+        document.getElementById("s").select();
+        return false;
+      }
+      else if (!pattern4.test(a))
+      { 
+        alert("Please enter a valid New Zealand phone number");
+        document.getElementById("num").select();
+        return false;
+      }
+      else if (!pattern5.test(b))
+      { 
+        alert("Please enter a valid email address");
+        document.getElementById("e").select();
+        return false;
+      }
+      else {
+        return true;
+      }
+   
+    }
+    function SetColor(x)
+      {
+        document.getElementById(x).style.backgroundColor="#f7c08a";
+      }
+      function changeColor(x)
+      {
+        document.getElementById(x).style.backgroundColor="white";
+        document.getElementById(x).style.color="black";
+      }
+
+  </script>
+  </head>
+<body>
+  <header>
+    <nav id="navbar">
+      <div id="container">
+        <h1 class="logo"><a href="index.html">Work4IT</a></h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li> <a href="jobsearch.html"> Job Search</a> </li>
+          <li> <a href="registration.html"> Employer Registration </a> </li>
+          <li> <a href="" class="current" href="employerpage.html"> Employer Page </a> </li>
+          <li> <a href="feedback.html"> Feedback </a> </li>
+          <li> <a href="about.html"> About Us </a> </li>
+        </ul>
+      </div>
+    </nav>
+ </header>
+<div class="content">
+  <h2>Work 4 IT </h2>
+</div>
+<form onsubmit="return checkform()" style="width: 300px; margin: 0 auto; background-color:#E6E6FA">
+  <h3 align="center">Add Advertisement:</h3>
+  <table>
+  <tr><td>Company name:</td><td><input type="text" id="na" onfocus="SetColor('na')" onblur="changeColor('na')"></td></tr>
+  <tr><td>Job Title:</td><td><input type="text" id="jt" onfocus="SetColor('jt')" onblur="changeColor('jt')"></td></tr>
+  <tr><td>Resposibilities:</td><td><input type="text" id="r" onfocus="SetColor('r')" onblur="changeColor('r')"></td></tr>
+  <tr><td>Requirements:</td><td><input type="text" id="re" onfocus="SetColor('re')" onblur="changeColor('re')"></td></tr>
+  <tr><td>Address:</td><td><input type="text" id="a" onfocus="SetColor('a')" onblur="changeColor('a')"></td></tr>
+  <tr><td>Salary:</td><td><input type="text" id="s" onfocus="SetColor('s')" onblur="changeColor('s')"></td></tr>
+  <tr><td>Contact number:</td><td><input type="text" id="num" onfocus="SetColor('num')" onblur="changeColor('num')"></td></tr>
+  <tr><td>Contact email:</td><td><input type="text" id="e" onfocus="SetColor('e')" onblur="changeColor('e')"></td></tr>
+  <tr><td><input type="Submit" value="Add Advertisement"></td><td><input type ="Reset"></td></tr>
+  </table>
+  </form>
+<br>
+<button type="button">Delete Advertisement</button>
+<br>
+
+
+<div class="clr"></div>
+  <footer id="main-footer">
+    <p>Work 4 IT &copy; 2020, All Rights Reserved</p>
+  </footer>
+</body>
+</html>
